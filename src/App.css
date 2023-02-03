@@ -1,38 +1,290 @@
-.App {
-  text-align: center;
+:root{
+  --background-surface: #0e0e23;
+  --text-primary:#ffffff;
+  --background-primary: linear-gradient(45deg, #1a1d3a 0%, #212752 100%);
+  --background-in-front: #1E2247;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (max-width: 1200px) {
+  .nav_tag{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between !important;
+    border-radius: 1.5rem;
+    padding: 0rem !important;
+    margin: 0rem !important;
+    gap: 3rem !important;
+    margin: 0rem 2rem !important;
+    width: 100%;
   }
+  .webTitle{
+    font-size: 1.25rem !important;
+  }
+  .dropdownIcon{
+    display: block !important;
+    cursor: pointer;
+  }
+  .inner_dashboard_grid{
+    display: grid !important;
+    grid-template-rows: 1fr 1fr 1fr 1fr !important;
+    grid-template-columns: 1fr !important;  
+    grid-gap: 0.5rem 0.5rem !important;
+}
+.desktopWrapper{
+  display: none !important;
+}
+.mobileWrapper{
+  display: block !important;
+  height: 65vh !important;
+  }
+
+  .main_container{
+    display: grid;
+    grid-template-rows: 1fr 4fr;  
+    width: 100% !important;
+    height: 60vh;
+    margin: 2rem;
+    grid-gap: 2rem 2rem;
+  }
+  .icon-left-arrow{
+    font-size: 2rem;
+    position: absolute;
+    bottom: 2rem !important;
+    left: 5rem !important;
+    cursor: pointer;
+  }
+  .icon-right-arrow{
+    font-size:2rem;
+    position:absolute;
+    bottom:2rem !important;
+    right :5rem !important;
+    cursor:pointer;
+  }
+  .mobile-menu{
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+  }
+  .menu {
+    height: 100%;
+    width: fit-content;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: -100%;
+    background-color: rgba(255, 255, 255, 0.75);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  .menu.open {
+    left: 0;
+  }
+  
+  .menu a {
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    color: #000;
+    font-size: 1.25rem;
+  }
+  .mobile-menu{
+    display: block !important;
+  }
+
+  .login-btn-mobile{
+    min-width: 10rem !important;
+    margin-top: 1rem !important;
+    border-radius: 50rem !important;
+    cursor: pointer;
+    border: 1px  solid black !important;
+  }
+  .login_container{
+    display: flex;
+    /* width: 100vw;
+    height: 100vh; */
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(4px);
+  }
+  .container{
+    width: 10vw;
+    height: 100vh;
+    z-index: -10;
+    /* background-size: ; */
+    background-image: url("./records.jpg");
+  }
+  .login-btn{
+    display: none;
+  }
+  .login-btn-auth{
+    font-size: inherit;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    z-index: 20;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+  }
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.mobileWrapper{
+  display: none ;
+}
+.mobile-menu{
+  display: none;
+}
+
+.desktopWrapper{
+  display:contents ;
+}
+.dropdownIcon{
+  display: none;
+}
+.nav_tag{
+  margin: 0rem 2rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content:flex-start;
+  gap: 5rem;
+  padding: 1rem 2rem;
+  border-radius: 1.5rem;
+}
+
+
+body {
+  margin: 0;
+  font-family: 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    background-image: url("./records.jpg");
+    background-size: cover;
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    overflow-x: hidden !important;
+    position: relative !important;
+  }
+  a {
+  color: inherit;
+  font-size: inherit;
+  text-decoration: none;
+  overflow: hidden;
+}
+.icon-left-arrow{
+  font-size: 2rem;
+  position: absolute;
+  bottom: 4rem;
+  left: 10rem;
+  cursor: pointer;
+}
+.icon-right-arrow{
+  font-size:2rem;
+  position:absolute;
+  bottom:4rem;
+  right :10rem;
+  cursor:pointer;
+}
+
+.login-btn-auth{
+  font-size: inherit;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  z-index: 20;
+  cursor: pointer;
+  transition: 0.3s;
+  border: none;
+}
+.login-btn-auth:hover{
+  background-color: black;
+  color: var(--text-primary);
+  transition: all 0.5s linear;
+}
+
+ .login-btn{
+  font-size: inherit;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  z-index: 20;
+  cursor: pointer;
+  transition: 0.3s;
+  border: none;
+}
+
+.login-btn:hover{
+  background-color: black;
+  color: var(--text-primary);
+  transition: all 0.5s linear;
+}
+
+.container{
+  width: 100vw;
+  height: 100vh;
+  z-index: -10;
+  background-size: contain;
+  background-image: url("./records.jpg");
+}
+
+.login_container{
+  display: flex;
+  width: 100vw;
+  height: 100vh;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  backdrop-filter: blur(4px);
+}
+.flex-wrapper{
+  display: flex;
+  justify-content: center;
+}
+.main_container{
+  display: grid;
+  grid-template-rows: 1fr 4fr;  
+  width: 80vw;
+  height: 60vh;
+  margin: 2rem;
+  grid-gap: 2rem 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+.inner_dashboard_grid{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr  1fr;  
+    grid-gap: 0.5rem 0.5rem;
 }
+.grid_item{
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    position: relative;
+    z-index: 1;
+}
+.inside_grid{
+  padding: 1rem 1.5rem;
+  z-index: 2;
+  height: 100%;
+  backdrop-filter: brightness(0.65);
+  border-radius: 1.5rem;
+}
+.inside_grid h3{
+  font-size: 3rem;
+  font-weight: 700;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.inside_grid img{
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+}
+.data_element{
+  margin-top: 1.25rem;
+  font-size:2rem;
+  font-weight: 700;
+}
+.data_category{
+  margin-top: 0.25rem;
+  font-size: 1rem;
+  font-weight: 400;
 }

@@ -3,7 +3,7 @@ import {useEffect, useState} from 'react';
 import { FaSpotify } from "react-icons/fa";
 
 const CLIENT_ID = "14d22c5f05ab48518f9221ba51d006bb"
-const REDIRECT_URI = "http://localhost:3000"
+const REDIRECT_URI = "https://luke-ichpekov.github.io/spotify-tracker/"
 const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize"
 const RESPONSE_TYPE = "token"
 const scopes = "user-top-read user-read-playback-state playlist-read-private playlist-read-collaborative user-read-recently-played"
